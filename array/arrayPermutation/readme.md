@@ -1,23 +1,18 @@
 # arrayPermutation
 
-## Definition
-A permutation can be specified by an array P, where P[i] represents the location of the element at i in the permutation. For example, [2, 1, 0] represents the permutation where elements at the index 0 and 2 are swapped.
+## Definicion
+Una permutación se puede especificar mediante un array P, donde P[i] representa la ubicación del elemento en i en la permutación. Por ejemplo, [2, 1, 0] representa la permutación donde se intercambian elementos en el índice 0 y 2.
 
-Given an array and a permutation, apply the permutation to the array. For example, given the array ["a", "b", "c"] and the permutation [2, 1, 0], return ["c", "b", "a"].
+Dada un array y una permutación, aplique la permutación al array. Por ejemplo, dado el array ["a", "b", "c"] y la permutación [2, 1, 0], devuelve ["c", "b", "a"].
 
-## Solutions
+## Soluciones
 
-### Creating a New Array
-The first solution creates a new array of the same length as the original array and assigns the values in the original array at the indices specified by the permutation array.  In [Strong-Typed Languages](https://en.wikipedia.org/wiki/Strong_and_weak_typing) like Golang, we need to use a separate array of the type that needs to be returned to arrange the input and the output. 
+### Crear un nuevo array
+La primera solución crea una nueva matriz de la misma longitud que la matriz original y asigna los valores de la matriz original en los índices especificados por la matriz de permutación. En [Strong-Typed Languages] (https://en.wikipedia.org/wiki/Strong_and_weak_typing) como Golang, necesitamos usar una matriz separada del tipo que debe devolverse para organizar la entrada y la salida.
 
-This implementation runs in O(n) speed since it needs to loop through the permutation array in its entirety in order to set the indices correctly. We also technically incur another O(n) cost to create the new array, but O(n) + O(n) reduces to O(2n), so we still consider it O(n) complexity.
+Esta implementación se ejecuta en O(n) ya que necesita recorrer la matriz de permutación en su totalidad para establecer los índices correctamente. También incurrimos técnicamente en otro costo 0(n) para crear la nueva matriz, pero O(n) + O(n) se reduce a O(2n), por lo que aún lo consideramos O(n) complejidad.
 
-The space complexity of this solution is also O(n), as we create a separate array to hold all of the values.
+La complejidad espacial de esta solución también es O(n), ya que creamos una matriz separada para contener todos los valores.
 
-### Modifying the Permutation Array
-In the second solution to the problem, we use the permutation array itself and assign the appropriate values at the permutation index of the first array into the permutation array.
-
-## Questions to ask
-1. Will the two input arrays always be the same length?
-1. How should we handle two empty arrays?
-1. Mention the static / dynamic type limitation and talk about the time complexities due to that. 
+### Modificación de la matriz de permutación
+En la segunda solución al problema, usamos la propia matriz de permutación y asignamos los valores apropiados en el índice de permutación de la primera matriz en la matriz de permutación.
